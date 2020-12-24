@@ -65,7 +65,7 @@ background-color: transparent;
 <h1 id=msgAuto style='font-size:30px;text-align:center;color:#6089f6;'>Auto HEN 2.1.3 <font color="#ee596f">ATIVADO</font></h1>
 </div>
 <br>
-<!-- <div style="text-align:center"><font size="3" color="#6089f6"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="#ee596f"><b><span id=failCounter></span></b> Falha(s)</font></div>   -->
+<div style="text-align:center"><font size="3" color="#6089f6"><b><span id=passCounter></span></b> Sucesso(s)</font>&nbsp;&nbsp;/&nbsp;&nbsp;<font size="3" color="#ee596f"><b><span id=failCounter></span></b> Falha(s)</font></div>  
 </div>
 <hr width="47%" size="1" color="#ff5757">
 <script>
@@ -79,7 +79,6 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <div style="text-align:center">
 <font size="3">Pressione o <font color="#ee596f"><b>CIRCULO PARA SAIR<b></font>.</font>
 </div>
-<br>
 <div style="text-align:center">
 <h1 style='font-size:25px;text-align:center;'><u><font color="#49c179">CARGAS ÚTEIS</font></u></h1>
 <button class="button" onmouseover="dicas2('cu1')" onMouseOut="fora()"  onclick="load_binloader(); return false"> Bin Loader </button>
@@ -87,15 +86,15 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <button class="button" onmouseover="dicas2('cu3')" onMouseOut="fora()"  onclick="load_dumper(); return false"> Dumper </button>
 <button class="button" onmouseover="dicas2('cu4')" onMouseOut="fora()"  onclick="load_linux(); return false"> Linux </button>
 <button class="button" onmouseover="dicas2('cu5')" onMouseOut="fora()"  onclick="load_app2usb(); return false"> App2USB </button>
-<button class="button" onmouseover="dicas2('cu7')" onMouseOut="fora()"  onclick="load_backup(); return false"> Backup </button>
+<button class="button" onmouseover="dicas2('cu7')" onMouseOut="fora()"  onclick="load_webrte(); return false"> WebRTE </button>
 <button class="button" onmouseover="dicas2('cu6')" onMouseOut="fora()"  onclick="load_kernelClock(); return false"> Kernel-Clock </button>
 <button class="button" onmouseover="dicas2('cu8')" onMouseOut="fora()"  onclick="load_spoofer(); return false"> Spoofer </button>
 <br><br>
 <a href="http://ps4trainer.com/Trainer/index.html" target="_blank" onmouseover="dicas2('cu15')" onMouseOut="fora()" ><button class="button"> Trainer On </button></a>
 <button class="button" onmouseover="dicas2('cu9')" onMouseOut="fora()"  onclick="load_todex(); return false"> ToDEX </button>
-<button class="button" onmouseover="dicas2('cu10')" onMouseOut="fora()"  onclick="load_historyblock(); return false"> Hist. Blocker </button>
-<button class="button" onmouseover="dicas2('cu11')" onMouseOut="fora()"  onclick="load_updatesdisable(); return false"> Disable Upd </button>
-<button class="button" onmouseover="dicas2('cu12')" onMouseOut="fora()"  onclick="load_updatesenable(); return false"> Enable Upd </button>
+<button class="button" onmouseover="dicas2('cu10')" onMouseOut="fora()"  onclick="load_historyBlocker(); return false"> Hist. Blocker </button>
+<button class="button" onmouseover="dicas2('cu11')" onMouseOut="fora()"  onclick="load_disableUpd(); return false"> Disable Upd </button>
+<button class="button" onmouseover="dicas2('cu12')" onMouseOut="fora()"  onclick="load_enableUpd(); return false"> Enable Upd </button>
 <button class="button" onmouseover="dicas2('cu13')" onMouseOut="fora()"  onclick="load_dbBackup(); return false"> DB Backup </button>
 <button class="button" onmouseover="dicas2('cu14')" onMouseOut="fora()"  onclick="load_dbRestore(); return false"> DB Restore </button>
 <br><br>
@@ -229,7 +228,7 @@ document.getElementById('msgAuto').style.display = 'none';}
 /*if (localStorage.passcount == null) localStorage.passcount=0;
 window.passCounter.innerHTML=localStorage.passcount;
 if (localStorage.failcount == null) localStorage.failcount=0;
-window.failCounter.innerHTML=localStorage.failcount; */
+window.failCounter.innerHTML=localStorage.failcount;*/
 
 
 function load_exploit_HEN(){
@@ -248,13 +247,23 @@ function load_app2usb(){
 window.location.replace("app2usb.html");}
 function load_kernelClock(){
 window.location.replace("kernelClock.html");}
-function load_backup(){
+function load_webrte(){
 window.location.replace("backup.html");}
 function load_spoofer(){
 //window.location.replace("spoofer.html");
 }
 function load_todex(){
 window.location.replace("todex.html");}
+function load_enableUpd(){
+window.location.replace("enableUpd.html");}
+function load_disableUpd(){
+window.location.replace("disableUpd.html");}
+function load_historyBlocker(){
+window.location.replace("historyBlocker.html");}
+function load_dbBackup(){
+window.location.replace("dbBackup.html");}
+function load_dbRespore(){
+window.location.replace("dbRespore.html");}
 
 </script>
 </body>
