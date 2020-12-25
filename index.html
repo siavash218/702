@@ -70,7 +70,7 @@ background-color: transparent;
 <hr width="47%" size="1" color="#ff5757">
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Instalando Cache Offline: <font color=\"#ee596f\">" + Percent + "%</font>";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"#6089f6\">Instalação na Cache Concluída! Aguarde ...</font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"#ee596f\">CIRCULO, DESABILITE a REDE e REINICIE O NAVEGADOR.</font>";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<font color=\"#6089f6\">Instalação na Cache Concluída! <font color=\"#ee596f\">Aguarde ...</font></font>";},1000);setTimeout(function(){window.msgs.innerHTML="Agora saia usando o <font color=\"#ee596f\">CIRCULO, desabilite a REDE e REINICIE o navegador.</font>";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};</script>
 
 </head>
 <h1 id=msgs style='font-size:25px;text-align:center;color:#6089f6;'>Se trava,<font color="#ee596f"> não atualize a página,</font> sempre reinicie o navegador.</font></h1>
@@ -86,7 +86,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <button class="button" onmouseover="dicas2('cu3')" onMouseOut="fora()"  onclick="load_dumper(); return false"> Dumper </button>
 <button class="button" onmouseover="dicas2('cu4')" onMouseOut="fora()"  onclick="load_linux(); return false"> Linux </button>
 <button class="button" onmouseover="dicas2('cu5')" onMouseOut="fora()"  onclick="load_app2usb(); return false"> App2USB </button>
-<button class="button" onmouseover="dicas2('cu7')" onMouseOut="fora()"  onclick="load_webrte(); return false"> WebRTE </button>
+<button class="button" onmouseover="dicas2('cu7')" onMouseOut="fora()"  onclick="load_kernelDumper(); return false"> WebRTE </button>
 <button class="button" onmouseover="dicas2('cu6')" onMouseOut="fora()"  onclick="load_kernelClock(); return false"> Kernel-Clock </button>
 <button class="button" onmouseover="dicas2('cu8')" onMouseOut="fora()"  onclick="load_spoofer(); return false"> Spoofer </button>
 <br><br>
@@ -101,9 +101,9 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="<fo
 <button class="button" onmouseover="dicas2('cu17')" onMouseOut="fora()"  onclick="load_SD_Backup(); return false"> Save Backup </button>
 <button class="button" onmouseover="dicas2('cu18')" onMouseOut="fora()"  onclick="load_SD_Restore(); return false"> Save Restore </button>
 <button class="button" onmouseover="dicas2('cu19')" onMouseOut="fora()"  onclick="load_avatarDumper(); return false"> Avatar </button>
-<button class="button"  onmouseover="dicas2('cu16')" onMouseOut="fora()"  onclick="load_fanthresh(); return false"> <font size=2px>temp. alvo</font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"></select><font size=5px>&#176;C</font>
+<button class="button"  onmouseover="dicas2('cu16')" onMouseOut="fora()"  onclick="load_fanThreshold(); return false"> <font size=2px>temp. alvo</font></button><select id="tempC"  style="font-size:20px;height:35px;width:60px;background-color:transparent;color:#ee596f;border:2px solid #404040;"></select><font size=5px>&#176;C</font>
 <script>
-for(var i=35; i<=80; i++){
+for(var i=40; i<=80; i=i+10){
     var select = document.getElementById("tempC");
     var option = document.createElement("OPTION");
 	select.options.add(option);
@@ -264,7 +264,10 @@ function load_dbBackup(){
 window.location.replace("dbBackup.html");}
 function load_dbRespore(){
 window.location.replace("dbRespore.html");}
-
+function load_fanThreshold(){
+window.location.replace("/fanThreshold/fanThreshold"+tempC.value+".html");}
+function load_kernelDumper(){
+window.location.replace("kernelDumper.html");}
 </script>
 </body>
 </html>
